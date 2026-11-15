@@ -1,0 +1,267 @@
+
+.ngo-email-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.68);
+  overflow-y: auto;
+}
+
+.ngo-email-dialog {
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  color: #172033;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.25);
+}
+
+.ngo-email-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ngo-email-eyebrow {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.ngo-email-header h2 {
+  margin: 7px 0 0;
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.ngo-email-close {
+  border: 0;
+  background: #f1f5f9;
+  color: #334155;
+  border-radius: 9px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ngo-email-demo-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #f1d49b;
+  border-radius: 11px;
+  background: #fff9ed;
+  color: #80520d;
+}
+
+.ngo-email-demo-notice svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ngo-email-demo-notice p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ngo-email-preview {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ngo-email-meta {
+  display: grid;
+  grid-template-columns: 75px minmax(0, 1fr);
+  gap: 12px;
+  padding: 13px 15px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+}
+
+.ngo-email-meta span,
+.ngo-email-body > span {
+  color: #64748b;
+  font-weight: 700;
+}
+
+.ngo-email-meta strong {
+  overflow-wrap: anywhere;
+  font-weight: 600;
+}
+
+.ngo-email-body {
+  padding: 15px;
+}
+
+.ngo-email-body > span {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.ngo-email-body pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.ngo-email-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin: 19px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #334155;
+  cursor: pointer;
+}
+
+.ngo-email-consent input {
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #176b55;
+  cursor: pointer;
+}
+
+.ngo-email-error {
+  color: #b42318;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.ngo-email-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ngo-email-actions button,
+.ngo-email-success button {
+  min-height: 43px;
+  padding: 10px 17px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ngo-email-cancel {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+}
+
+.ngo-email-send,
+.ngo-email-success button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  background: #176b55;
+  color: white;
+}
+
+.ngo-email-send:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ngo-email-spinner {
+  animation: ngo-email-spin 1s linear infinite;
+}
+
+@keyframes ngo-email-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ngo-email-success {
+  text-align: center;
+  padding: 28px 12px;
+}
+
+.ngo-email-success > svg {
+  color: #16845b;
+}
+
+.ngo-email-success h3 {
+  margin: 15px 0 8px;
+  font-size: 21px;
+}
+
+.ngo-email-success p {
+  max-width: 440px;
+  margin: 0 auto 22px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .ngo-email-overlay {
+    padding: 10px;
+  }
+
+  .ngo-email-dialog {
+    padding: 19px;
+    border-radius: 14px;
+  }
+
+  .ngo-email-header h2 {
+    font-size: 19px;
+  }
+
+  .ngo-email-actions {
+    flex-direction: column-reverse;
+  }
+
+  .ngo-email-actions button {
+    width: 100%;
+  }
+}
+
+.ngo-reply-notification {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #e9f7ef;
+  border: 1px solid #a8d9ba;
+  color: #155b35;
+}
+
+.ngo-reply-notification h3 {
+  margin: 0 0 8px;
+}
+
+.ngo-reply-notification p {
+  margin: 0;
+  white-space: pre-wrap;
+}
