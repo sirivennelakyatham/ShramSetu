@@ -1,0 +1,91 @@
+ .complaint-pathways {
+  --ss-green: #174f43;
+  --ss-green-dark: #103d34;
+  --ss-cream: #f6f6f0;
+  --ss-gold: #c89d52;
+  --ss-blue: #52758a;
+  --ss-border: #dce5df;
+  width: min(1120px, calc(100% - 36px));
+  margin: 34px auto 56px;
+  color: #183f38;
+  font-family: inherit;
+}
+.pathways-hero {
+  text-align: center;
+  padding: 34px 22px 30px;
+  background: linear-gradient(145deg, #f7f7f1, #eef4ef);
+  border: 1px solid var(--ss-border);
+  border-radius: 24px;
+  margin-bottom: 28px;
+}
+.pathways-hero-icon {
+  width: 58px; height: 58px; border-radius: 18px;
+  display: grid; place-items: center; margin: 0 auto 15px;
+  color: var(--ss-green); background: #e2eee7;
+}
+.pathways-eyebrow {
+  color: #a47b36; font-size: .76rem; font-weight: 800;
+  letter-spacing: .13em; margin: 0 0 9px;
+}
+.pathways-hero h1 { color: var(--ss-green); font-size: clamp(1.8rem, 4vw, 2.65rem); line-height: 1.2; margin: 0 0 12px; }
+.pathways-intro { color: var(--ss-blue); font-size: 1.04rem; line-height: 1.7; max-width: 700px; margin: 0 auto 20px; }
+.pathways-listen-all, .pathway-listen-button, .pathway-select-button, .pathways-primary-button {
+  min-height: 44px; border-radius: 12px; display: inline-flex; align-items: center;
+  justify-content: center; gap: 9px; padding: 10px 16px; font: inherit; font-weight: 700;
+  cursor: pointer; transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.pathways-listen-all { background: var(--ss-green); color: white; border: 1px solid var(--ss-green); }
+.pathways-listen-all:hover, .pathway-select-button:hover { background: var(--ss-green-dark); transform: translateY(-1px); }
+.pathways-listen-all:disabled, .pathway-listen-button:disabled { opacity: .55; cursor: wait; }
+.pathways-results-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin: 0 2px 15px; }
+.pathways-results-heading div { display: flex; align-items: baseline; gap: 12px; }
+.pathways-results-heading span { color: var(--ss-blue); font-size: .88rem; font-weight: 700; }
+.pathways-results-heading strong { color: var(--ss-green); font-size: 1.6rem; }
+.pathways-results-heading p { color: #6c8184; font-size: .85rem; margin: 0; }
+.pathways-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.pathway-card {
+  position: relative; display: flex; flex-direction: column; min-width: 0;
+  padding: 22px; border-radius: 19px; border: 1px solid var(--ss-border);
+  background: #fff; box-shadow: 0 7px 22px rgba(26, 66, 55, .055);
+  overflow: hidden;
+}
+.pathway-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 5px; background: var(--ss-gold); }
+.pathway-government::before { background: var(--ss-green); }
+.pathway-community::before { background: #7897a7; }
+.pathway-card-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; margin-bottom: 15px; }
+.pathway-number { color: #a47b36; background: #f7f0e2; border-radius: 8px; padding: 5px 8px; font-size: .78rem; font-weight: 800; }
+.pathway-type { color: var(--ss-green); background: #eaf2ed; border-radius: 999px; padding: 6px 10px; font-size: .75rem; font-weight: 800; }
+.pathway-verification { margin-left: auto; display: inline-flex; align-items: center; gap: 5px; font-size: .7rem; font-weight: 700; }
+.pathway-verification.is-verified { color: #28734f; }
+.pathway-verification.is-unverified { color: #a66b26; }
+.pathway-card h2 { color: #173f38; font-size: 1.3rem; line-height: 1.35; margin: 0 0 10px; }
+.pathway-location { display: flex; align-items: center; gap: 6px; color: var(--ss-blue); font-size: .88rem; margin: 0 0 12px; }
+.pathway-description { color: #425e62; font-size: .94rem; line-height: 1.7; margin: 0 0 16px; }
+.pathway-services { background: #f5f7f3; border-radius: 13px; padding: 14px 16px; margin: 0 0 15px; }
+.pathway-services h3 { color: var(--ss-green); font-size: .9rem; margin: 0 0 8px; }
+.pathway-services ul { margin: 0; padding-left: 20px; color: #49636a; line-height: 1.65; font-size: .88rem; }
+.pathway-notice { display: flex; align-items: flex-start; gap: 9px; color: #855d25; background: #fbf5e9; border: 1px solid #f0e1c3; padding: 11px 12px; border-radius: 11px; font-size: .8rem; line-height: 1.55; margin: 0 0 16px; }
+.pathway-notice svg { flex: 0 0 auto; margin-top: 1px; }
+.pathway-card-actions { display: flex; gap: 10px; margin-top: auto; padding-top: 5px; }
+.pathway-listen-button { color: var(--ss-green); background: white; border: 1px solid #cbdad1; }
+.pathway-listen-button:hover { background: #edf4ef; }
+.pathway-select-button { flex: 1; color: white; background: var(--ss-green); border: 1px solid var(--ss-green); }
+.pathways-disclaimer { color: #64797c; background: #f1f4f0; border-left: 4px solid var(--ss-gold); border-radius: 8px; padding: 15px 17px; font-size: .86rem; line-height: 1.65; margin: 24px 0 0; }
+.pathways-state { width: min(680px, calc(100% - 36px)); margin: 70px auto; padding: 34px; text-align: center; border: 1px solid var(--ss-border); border-radius: 20px; background: var(--ss-cream); color: var(--ss-green); }
+.pathways-state p { color: var(--ss-blue); line-height: 1.65; }
+.pathways-state-icon { margin: 0 auto 12px; color: #a66b26; }
+.pathways-primary-button { color: white; background: var(--ss-green); border: 0; }
+.pathways-spinner { width: 34px; height: 34px; margin: 0 auto 16px; border: 3px solid #d8e4dc; border-top-color: var(--ss-green); border-radius: 50%; animation: pathways-spin .8s linear infinite; }
+@keyframes pathways-spin { to { transform: rotate(360deg); } }
+@media (max-width: 760px) {
+  .pathways-grid { grid-template-columns: 1fr; }
+  .pathways-results-heading { align-items: flex-start; flex-direction: column; }
+  .pathway-card { padding: 19px; }
+}
+@media (max-width: 440px) {
+  .complaint-pathways { width: min(100% - 22px, 1120px); margin-top: 18px; }
+  .pathways-hero { padding: 27px 15px 23px; border-radius: 18px; }
+  .pathway-card-actions { flex-direction: column; }
+  .pathway-listen-button, .pathway-select-button { width: 100%; }
+  .pathway-verification { margin-left: 0; width: 100%; }
+}
